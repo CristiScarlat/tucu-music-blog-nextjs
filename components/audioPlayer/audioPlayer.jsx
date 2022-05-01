@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faStop, faFastForward, faFastBackward, faVolumeMute, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
-import "./audioPlayer.css";
+//import "./audioPlayer.css";
 
 const AudioPlayer = ({ playlist }) => {
     const [playStatus, setPlayStatus] = useState(false);

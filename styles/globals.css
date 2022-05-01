@@ -4,12 +4,12 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: black!important;
+  background-color: black !important;
   /* font-family: Bahnschrift; */
   font-family: 'Source Sans Pro', sans-serif;
   font-style: normal;
   font-weight: 400;
-  
+
 }
 
 * {
@@ -31,6 +31,102 @@ a {
   text-decoration: none;
 }
 
+.main-player {
+  position: relative;
+  overflow-y: auto;
+}
+
+.player-container {
+  /* margin: 1rem; */
+  /* background: #000000ad; */
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.list-group-item.transparent {
+  background: transparent;
+  border: none;
+}
+
+.player-control-buttons {
+  border: none;
+  background: none;
+  outline: transparent;
+}
+
+.player-control-buttons:hover {
+  opacity: 0.6;
+}
+
+.player-buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player-playlist-container {
+  /* color: #ffffff8c; */
+  color: rgb(250, 183, 28);
+  /* color: #a8d5e0; */
+  /* height: 68vh; */
+  overflow: auto;
+  margin-top: 3rem;
+}
+
+.player-playlist-container li:hover {
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.player-playlist-container li.selected {
+  /* color: #5b98fa; */
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.custom-container-absolute {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #000000c7;
+}
+
+#player-volum-container {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  flex: 1;
+}
+
+@media only screen and (min-width: 800px) {
+  .custom-container-absolute {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 3rem;
+    position: absolute;
+    right: 10%;
+    top: 0;
+    width: 30%;
+    height: 80%;
+    background: #000000e0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #player-volum-container {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1100px) {
+  .player-controls-container {
+    flex-direction: column;
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -38,25 +134,19 @@ a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #000000; 
+  background: #000000;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #404142; 
+  background: #404142;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #1a1b1b; 
+  background: #1a1b1b;
 }
 
-input[type="range"]:hover{
+input[type="range"]:hover {
   cursor: pointer;
 }
-
-
-
-
-
-
