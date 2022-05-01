@@ -4,8 +4,6 @@ const ArtistsPage = () => {
         <main className="main-artists-page">
             <div lang="ro-RO" link="#000080" vlink="#800000" dir="ltr" className='artists-container'>
                 <div>Țucu Bleich - <span>muzică, texte<span style={{ color: 'rgb(250, 183, 28)' }}>*</span>, voce, orchestrație</span></div>
-
-                {/* <div style={{color: '#f8f9faad', fontWeight: 400}}>au participat:</div> */}
                 <ul>
                     <li>Mircea Bunea - <span>chitară (1,4,6,8,10,13)</span></li>
                     <li>Victor Miclăuș - <span>bass (2,4,5,6,8,9,12,14)</span></li>
@@ -23,7 +21,7 @@ const ArtistsPage = () => {
                     <li>Ștefan Sărăcuți - <span>tubă (13)</span></li>
                 </ul>
                 <div>
-                    <div className='mt-2'><span style={{ color: 'rgb(250, 183, 28)' }}>*</span>Radu Cristian Constantin - <span>"Derulare", textul piesei Sauvage (13)</span></div>
+                    <div className='mt-2'><span style={{ color: 'rgb(250, 183, 28)' }}>*</span>Radu Cristian Constantin - <span>&quot;Derulare&quot;, textul piesei Sauvage (13)</span></div>
                     <div>Sebastian Ciocan  (Show Factory) - <span>sunet</span></div>
                     <div>Mircea Bunea - <span>grafică copertă</span></div>
                 </div>
