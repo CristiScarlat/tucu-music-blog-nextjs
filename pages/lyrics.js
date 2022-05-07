@@ -41,7 +41,7 @@ const LyricsPage = () => {
 
                 <p>Un miliardar american iubesc specia</p>
                 <p>S-a oferit să cumpere cu cash Grecia</p>
-                <p>S-o facă cadou unei fice pe nume Rosalia</p>
+                <p>S-o facă cadou unei fiice pe nume Rosalia</p>
                 <p>Dar i-a spus omul pe șleau în față</p>
                 <p>De nu-și face treaba și nu învață</p>
                 <p>Primește cadou de majorat</p>
@@ -53,7 +53,7 @@ const LyricsPage = () => {
                 <p>Vorbește însă de-o scară valorică</p>
                 <p>Întoarsă pe dos călcată brutal în picioare</p>
                 <p>Iar noi ce credem că suntem mai buni</p>
-                <p>Amânăm consegvent pe ziua de luni</p>
+                <p>Amânăm consecvent pe ziua de luni</p>
                 <p>Iminenta stringenta și inteligenta schimbare</p>
 
                 <div className="m-3" />
@@ -97,10 +97,6 @@ const LyricsPage = () => {
 
                 <div className="m-3" />
 
-                <p>Apoi o veni apa și l-o lua</p>
-
-                <div className="m-3" />
-
                 <h4>Îmi placi</h4>
                 <div className="m-3" />
                 <p>Îmi place gura ta și-mi plac și ochii tăi căprui</p>
@@ -113,14 +109,14 @@ const LyricsPage = () => {
                 <p>Când te dezbraci</p>
                 <div className="m-3" />
                 <p>Îmi place-arhitectura ta și cum ești construită</p>
-                <p>Nu ostentezi nu bați la ochi dar ceri să fi privită</p>
+                <p>Nu ostentezi nu bați la ochi dar ceri să fii privită</p>
                 <p>Îmi place-ntreaga-ți geometrie cu cercuri magice triunghiuri</p>
                 <p>Și uite doar ce povestesc că simt în inimă cumplite junghiuri</p>
                 <div className="m-3" />
-                <p>Nu ști să cânți sau să pictezi nu ști filozofie</p>
+                <p>Nu știi să cânți sau să pictezi nu știi filozofie</p>
                 <p>Dar recunosc sărutul tău e-o pură poezie</p>
                 <p>Îmi place gustul tău și-atât de greu mi-ar fi să-l definesc</p>
-                <p>Aduce-a fructe de pădure ce-ascunse peste frunze cresc</p>
+                <p>Aduce-a fructe de pădure ce-ascunse pe sub frunze cresc</p>
                 <div className="m-3" />
                 <p>Îmi place tot ce faci</p>
                 <p>Dar cel mai tare-mi placi</p>
@@ -130,22 +126,22 @@ const LyricsPage = () => {
 
                 <h4>Nu se întâmplă nimic</h4>
                 <div className="m-3" />
-                <p>Nu se întâmplă nimic, e totul obișnuit.</p>
+                <p>Nu se întâmplă nimic e totul obișnuit.</p>
                 <p>Săptămânile trec. Uite și toamna a venit ...</p>
-                <p>Ceasul de lângă pat ticăie neîncetat,</p>
-                <p>Ultima oara l-ai tras în vinerea când ai plecat.</p>
-                <p>E întuneric afară, e dimineață sau e seară.</p>
-                <p>Ridic pachetul de țigări și îmi aprind o țigară.</p>
-                <p>Nu se întâmplă nimic, fumez și fumul mă îneacă.</p>
+                <p>Ceasul de lângă pat ticăie neîncetat</p>
+                <p>Ultima oara l-ai tras în vinerea când ai plecat</p>
+                <p>E întuneric afară, e dimineață sau e seară</p>
+                <p>Ridic pachetul de țigări și îmi aprind o țigară</p>
+                <p>Nu se întâmplă nimic, fumez și fumul mă îneacă</p>
                 <p>A mai trecut un minut și încă unul o să treacă ...</p>
-                <p>Prin fereastra deschisă văd cerul negru albăstrui,</p>
-                <p>Trei stele mi-aduc aminte de-obrazul tău cu trei pistrui.</p>
-                <p>Nu se întâmplă nimic, e totul ca întotdeauna </p>
-                <p>Din când în când mă trezesc și văd ba soarele, ba luna ...</p>
-                <p>Eu încă sper că vei veni și parcă te aud urcând. </p>
-                <p>Aud cheia în ușă, te-aud intrând, dar doar în gând.</p>
-                <p>Și dac-ai fii din nou aici te-aș răsfăța, te-aș alinta, </p>
-                <p>Iar apoi, împreună, am evada din camera mea ... </p>
+                <p>Prin fereastra deschisă văd cerul negru albăstrui</p>
+                <p>Trei stele mi-aduc aminte de-obrazul tău cu trei pistrui</p>
+                <p>Nu se întâmplă nimic e totul ca întotdeauna </p>
+                <p>Din când în când mă trezesc și văd ba soarele ba luna ...</p>
+                <p>Eu încă sper că vei veni și parcă te aud urcând </p>
+                <p>Aud cheia în ușă te-aud intrând dar doar în gând</p>
+                <p>Și dac-ai fii din nou aici te-aș răsfăța te-aș alinta </p>
+                <p>Iar apoi împreună am evada din camera mea ... </p>
 
                 <div className="m-3" />
 
@@ -156,14 +152,14 @@ const LyricsPage = () => {
                 <p>Cu ochii-nchiși ascult Genesis</p>
                 <p>Căutându-te în gând</p>
                 <p>Zeci de imagini o iau razna</p>
-                <p>Dispar iar apărând</p>
+                <p>Apar iar dispărând</p>
                 <div className="m-3" />
                 <p>Lumina ta mi-a mai rămas</p>
                 <p>Și-o aromă orientală</p>
                 <p>Iar Collins cântă Follow me</p>
                 <p>Din lumea lui colaterală</p>
                 <div className="m-3" />
-                <p>Mă ard emoții fără chip</p>
+                <p>Emoții fără glas și chip</p>
                 <p>Și energii străine</p>
                 <p>De care oricât m-aș feri</p>
                 <p>Mă poartă către tine</p>
@@ -241,7 +237,7 @@ const LyricsPage = () => {
 
                 <h4>Singur</h4>
                 <div className="m-3" />
-                <p>Oglinda-n perete-mi surîde cu fața-i ovală</p>
+                <p>Oglinda-n perete-mi surâde cu fața-i ovală</p>
                 <p>În afară de-o masă și-un pat camera-i goală</p>
                 <p>Pe podea niște cărți ce nu le-am citit</p>
                 <p>Din afișul cel vechi și îngălbenit</p>
@@ -250,11 +246,11 @@ const LyricsPage = () => {
                 <p>În sticla de lapte flori moarte la număr cam șapte</p>
                 <p>Tavanul pătat pare-un cer înorat de mister încărcat dar nu e</p>
                 <p>La radio-ncet cânt-o trupă un concert ce-l cunosc pe de rost de dinainte</p>
-                <p>Este Claude Debussy ori Satie nu-mi aduc aminte</p>
+                <p>E Claude Debussy ori Satie nu-mi aduc aminte</p>
                 <div className="m-3" />
                 <p>Sunt singur iar </p>
                 <p>Mi te plimbi printre gânduri cu-n aer banal și vulgar</p>
-                <p>Toamna-și scutură frunzele moarte-nșirțndu-le pe trotuar</p>
+                <p>Toamna-și scutură frunzele moarte-nșirându-le pe trotuar</p>
                 <p>Iar eu calc printre ele pe visele mele</p>
                 <p>Cu-n zâmbet doar</p>
                 <div className="m-3" />
@@ -265,7 +261,7 @@ const LyricsPage = () => {
                 <p>Cu-n zâmbet doar</p>
                 <div className="m-3" />
                 <p>În gând rând pe rând trec râzând clipe reci și banale</p>
-                <p>Amintiri de prost gust îmi crează senzații nasoale</p>
+                <p>Amintiri de prost gust îmi provoacă senzații nasoale</p>
                 <p>Beau cafeaua de ieri și sunt obosit</p>
                 <p>Ce emoție simt cred c-am reușit</p>
                 <p>De pe marginea ceștii s-ating</p>
@@ -321,7 +317,7 @@ const LyricsPage = () => {
                 <p>Evident că prin urmare</p>
                 <p>Celălalt este mai mic</p>
                 <div className="m-3" />
-                <p>Iar cel mic ascunde-ntr-însul</p>
+                <p>Iar cel mic ascunde-n dânsul</p>
                 <p>Foc și pară în exces</p>
                 <p>Când te podidește plânsul</p>
                 <p>El e sursa mea de stres</p>
@@ -383,7 +379,7 @@ const LyricsPage = () => {
                 <p>Dar nu mi-au deschis</p >
                 <div className="m-3" />
                 <p>De câte ori am crezut că te-am întâlnit</p >
-                <p>De-atâteaori într-un final s-a dovedit</p >
+                <p>De-atâtea ori într-un final s-a dovedit</p >
                 <p>Că nu</p >
                 <p>Că nu erai tu</p >
                 <div className="m-3" />
@@ -414,9 +410,9 @@ const LyricsPage = () => {
                 <div className="m-3" />
                 <p>Aici trăiesc cu o făptură</p>
                 <p>Într-o sublimă coerență</p>
-                <p>Aceași ochi aceași gură</p>
+                <p>Aceiaşi ochi aceeași gură</p>
                 <p>Ceva mai mică de statură</p>
-                <p>Și-înco infimă diferență</p>
+                <p>Și-înc-o infimă diferență</p>
                 <div className="m-3" />
                 <p>Ca noi însă mai mici am patru</p>
                 <p>Ce tropăie și bat cadența</p>
@@ -437,7 +433,7 @@ const LyricsPage = () => {
                 <p>Reții așa-i adresa mea</p>
                 <p>De vii acasă să mă iei</p>
                 <p>Cum te apropii dinspre stea</p>
-                <p>E cea albastră sfera trei</p>
+                <p>E cea albastră Sfera trei</p>
                 <div className="m-3" />
 
                 <h4>Amnezie</h4>
@@ -446,16 +442,16 @@ const LyricsPage = () => {
                 <p>Mi-este fruntea ca de ghiață, ceru-ntre copaci senin.</p>
                 <p>Tu îmi ești necunoscută, îți ridici capul ușor </p>
                 <p>Și-mi spui „Bună dimineața“, cu un zâmbet incolor.</p>
-                <p>Vreau să îți răspund, dar vocea parcă mi se-oprește-n gât.</p>
+                <p>Vreau să îți răspund, dar vocea parcă mi se-oprește-n gât,</p>
                 <p>Totuși reușesc să bângui „Cine ești și unde sunt?“ </p>
-                <p>Răsul tău plin și sarcastic, parcă-l știu, l-am mai gustat,</p>
+                <p>Râsul tău plin și sarcastic, parcă-l știu, l-am mai gustat</p>
                 <p>Și-al tău gest atât de plastic cu un deget ridicat ... </p>
                 <p>Nu-mi răspunzi și suverană îmi strecori mâna la spate</p>
                 <p>Și-mi spui „Hei, glumele tale le cunosc demult, pe toate ...“ </p>
-                <p>Sunt confuz și parcă tremur, iar privirea ta mă fură. </p>
-                <p>Când încerc să-ți spun „Eu nu sunt ...“, îmi pui degetul pe gură.</p>
+                <p>Sunt confuz și parcă tremur, iar privirea ta mă fură, </p>
+                <p>Când încerc să-ți spun „Eu nu sunt ...“, îmi pui degetul pe gură,</p>
                 <p>Apoi mă săruți, Isuse! Ca-n nuvela lui Eliade. </p>
-                <p>Sunt pierdut, realul dus e, trupu-mi tremură, și arde ... </p>
+                <p>Sunt pierdut, realul dus e, trupu-mi tremură și arde ... </p>
                 <p>„CINE EȘTI TU?“</p>
                 <p>Spune-mi cine ești tu? </p>
                 <p>E târziu, mă spăl pe față, încă-mi ești prezentă-n gând </p>
@@ -463,6 +459,7 @@ const LyricsPage = () => {
                 <div className="m-3" />
 
                 <h4>Sauvage</h4>
+                <div style={{fontSize: '18px'}}>(Derulare - Radu Cristian Constantin)</div>
                 <div className="m-3" />
                 <p>Zadarul existenței când apare,</p>
                 <p>de prin siajul zilelor de luni,</p>
@@ -492,7 +489,7 @@ const LyricsPage = () => {
 
                 <h4>ULTIMA</h4>
                 <div className="m-3" />
-                <p>Da  eram singur în salon</p>
+                <p>Da meram singur în salon</p>
                 <p>Ferestrele curate</p>
                 <p>Și atârnam de un cordon</p>
                 <p>La niște aparate</p>
@@ -504,7 +501,7 @@ const LyricsPage = () => {
                 <div className="m-3" />
                 <p>Un popă cânt-un cântec fals</p>
                 <p>Fără vreo intonație</p>
-                <p>Noi doi dansăm ultimul vals</p>
+                <p>Noi doi dansăm ultimul dans</p>
                 <p>Până la Recreație</p>
                 <div className="m-3" />
                 <p>În coma mea de grad sporit</p>

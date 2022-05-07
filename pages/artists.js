@@ -31,6 +31,7 @@ const ArtistsPage = () => {
                     <div>Alexandru Andrieș,</div>  
                     <div>Cristina Manderscheidt,</div>
                     <div>Adi Dinu Schwarz,</div>  
+                    <div>Horea Silvio Crișovan</div>
                     <div>Gheorghe Șfaițer,</div>  
                     <div>Georg Torz</div>
                 </div>

@@ -39,3 +39,12 @@
     width: 460px;
     margin: 0.5rem;
 }
+
+@media only screen and (max-width: 600px){
+    .gallery-swipe-container img{
+        object-fit: cover;
+        height: auto;
+        width: 365px;
+        margin: 0.5rem;
+    }
+}

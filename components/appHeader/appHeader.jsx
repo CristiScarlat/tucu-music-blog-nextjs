@@ -15,7 +15,9 @@ const AppHeader = ({ brandName, expand, children }) => {
                         <Link href="/player"><a className="nav-link">Piese</a></Link>
                         <Link href="/lyrics"><a className="nav-link">Texte</a></Link>
                         <Link href="/artists"><a className="nav-link">Artisti</a></Link>
-                        <Link href="/imagesandstories"><a className="nav-link">Imagini si povesti</a></Link>
+                        <Link href="/imagesandstories"><a className="nav-link">Imagini</a></Link>
+                        <Link href="/shop"><a className="nav-link">Cumpara</a></Link>
+                        <Link href="/posts"><a className="nav-link">Impresii</a></Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
