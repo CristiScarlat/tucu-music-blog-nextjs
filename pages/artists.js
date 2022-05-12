@@ -5,9 +5,9 @@ const ArtistsPage = () => {
             <div lang="ro-RO" link="#000080" vlink="#800000" dir="ltr" className='artists-container'>
                 <div>Țucu Bleich - <span>muzică, texte<span style={{ color: 'rgb(250, 183, 28)' }}>*</span>, voce, orchestrație</span></div>
                 <ul>
-                    <li>Mircea Bunea - <span>chitară (1,4,6,8,10,13)</span></li>
+                    <li>Mircea Bunea - <span>chitară (1,4,6,8,10,12,13)</span></li>
                     <li>Victor Miclăuș - <span>bass (2,4,5,6,8,9,12,14)</span></li>
-                    <li>Cristi Scarlat - <span>chitară (2,5,9,12,14)</span></li>
+                    <li>Cristi Scarlat - <span>chitară (2,5,9,14)</span></li>
                     <li>Toni Kühn - <span>clape (1,4,6)</span></li>
                     <li>Ilie Stepan - <span>chitară (3)</span></li>
                     <li>Adi Bărar - <span>chitară (7)</span></li>
@@ -17,7 +17,7 @@ const ArtistsPage = () => {
                     <li>Lara Sarah Bleich - <span>voce (5)</span></li>
                     <li>Sebastian Ciocan - <span>clape (13)</span></li>
                     <li>Marius Iacovania - <span>chitara 2 (11)</span></li>
-                    <li>Loris Negruț - <span>chitară (7)</span></li>
+                    <li>Loris Negruț - <span>chitară, bass, clape (7)</span></li>
                     <li>Ștefan Sărăcuți - <span>tubă (13)</span></li>
                 </ul>
                 <div>
