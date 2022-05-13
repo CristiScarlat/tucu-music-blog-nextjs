@@ -109,7 +109,7 @@ a {
   background-color: #212529;
 }
 
-.modal-content {
+.modal-content-dark-bg .modal-content {
   background: #424242;
   color: whitesmoke;
 }

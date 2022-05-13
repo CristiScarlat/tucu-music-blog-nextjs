@@ -3,7 +3,7 @@ import { Modal, Form, Button } from 'react-bootstrap';
 const ModalForm = ({showModal, handleCloseModal, handleSaveButton}) => {
   
     return (
-        <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal show={showModal} onHide={handleCloseModal} className="modal-content-dark-bg">
           <Modal.Header closeButton>
             <Modal.Title>Adauga impresia ta</Modal.Title>
           </Modal.Header>
