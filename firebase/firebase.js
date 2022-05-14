@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -17,4 +18,6 @@ const firebaseApp = initializeApp(firebaseConfig);
 // Get a reference to the storage service, which is used to create references in your storage bucket
 const storage = getStorage(firebaseApp);
 
-export { storage, ref, listAll, getDownloadURL }
+const db = getFirestore(firebaseApp);
+
+export { db, collection, getDocs, storage, ref, listAll, getDownloadURL }

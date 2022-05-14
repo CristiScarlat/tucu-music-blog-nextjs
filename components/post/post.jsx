@@ -1,13 +1,12 @@
 
 
-const PostComponent = ({title, name, content}) => {
+const PostComponent = ({title, name, content, postDate}) => {
     return(
     <div className="post-container">
-        <h4 className="post-title">{title}</h4>
-        {/* <hr/> */}
-        <h5 className="post-writer-name">by {name}</h5>
-        {/* <hr/> */}
-        <div className="post-content">{content}</div>
+        <p style={{opacity: 0.5}}>{postDate || ''}</p>
+        <h4 className="post-title">{title || ''}</h4>
+        <h5 className="post-writer-name">{name || ''}</h5>
+        <div className="post-content">{content || ''}</div>
     </div>
     )
 }

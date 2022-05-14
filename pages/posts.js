@@ -1,18 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PostComponent from '../components/post/post';
 import ModalForm from '../components/modalForm/modalForm';
 import { Button } from 'react-bootstrap';
+import { getPosts } from '../services/api';
 
 const Posts = () => {
 
     const [showModal, setShowModal] = useState(false);
+    const [postsList, setPostsList] = useState([]);
 
-    const mainStyle = {
-        backgroundImage: 'url(images/poze/1.png)',
-        backgroundRepeat: 'no-repeat, repeat',
-        backgroundSize: 'contain',
-        flex: 'auto'
-    }
+    useEffect(() => {
+        getPosts().then(res => {
+            const posts = res.map(p => ({
+                title: p.title,
+                fullName: p.fullName,
+                details: p.details,
+                postDate: p.timestamp.toDate()
+            }))
+            setPostsList(posts)
+        })
+    }, [])
 
     const handleSavePost = () => {
         setShowModal(false)
@@ -25,24 +32,20 @@ const Posts = () => {
             </div>
             <hr style={{ color: 'white' }} />
             <div style={{ height: '45rem', overflowY: 'auto' }}>
-                {[1,2,3,4,5,6,7,8,9].map(p => (
-                    <>
+                {postsList.map((p) => (
+                    <div key={p.postDate.toString()}>
                         <PostComponent
-                            title="Super fain!"
-                            name="Cristi S"
-                            content="Nu exista in Romania musica mai faina ca asta."
+                            title={p.title}
+                            name={p.fullName}
+                            content={p.details}
+                            postDate={p.postDate.toString()}
                         />
                         <div className="mt-3" />
-                        <PostComponent
-                            title="Super fain!"
-                            name="Cristi S"
-                            content="Ad irure Lorem tempor pariatur duis officia Lorem eu quis ex incididunt tempor incididunt. Nulla exercitation commodo dolore sit amet commodo dolor duis deserunt cillum. Pariatur ex eu est anim amet duis commodo aliquip consectetur ullamco amet consequat et ad. Dolore aliquip aliqua labore mollit ullamco nulla veniam anim incididunt voluptate ut. Aliqua cillum sunt mollit enim magna qui enim non ea non ea."
-                        />
-                    </>
+                    </div>
                 ))}
 
             </div>
-            <ModalForm showModal={showModal} handleSaveButton={handleSavePost} handleCloseModal={() => setShowModal(false)}/>
+            <ModalForm showModal={showModal} handleSaveButton={handleSavePost} handleCloseModal={() => setShowModal(false)} />
         </main>
     )
 }
