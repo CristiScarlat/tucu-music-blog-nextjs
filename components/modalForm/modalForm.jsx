@@ -16,7 +16,7 @@ const ModalForm = ({ showModal, handleCloseModal, handleSaveButton }) => {
         title: formTitle,
         fullName: formFullname,
         details: formDetails,
-        postDate: toFirebaseTimestamp(new Date()),
+        timestamp: toFirebaseTimestamp(new Date()),
       });
     }
     return;

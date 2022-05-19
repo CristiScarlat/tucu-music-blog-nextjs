@@ -8,21 +8,27 @@ const Posts = () => {
   const [showModal, setShowModal] = useState(false);
   const [postsList, setPostsList] = useState([]);
 
-  useEffect(() => {
+  const fetchPosts = () => {
     getPosts().then((res) => {
-      const posts = res.map((p) => ({
-        title: p.title,
-        fullName: p.fullName,
-        details: p.details,
-        postDate: p.timestamp.toDate(),
-      }));
-      setPostsList(posts);
-    });
+        const posts = res.map((p) => ({
+          title: p.title,
+          fullName: p.fullName,
+          details: p.details,
+          postDate: p.timestamp.toDate(),
+        }));
+        setPostsList(posts);
+      });
+  }
+
+  useEffect(() => {
+    fetchPosts();
   }, []);
 
   const handleSavePost = (post) => {
     setShowModal(false);
-    setPost(post);
+    setPost(post).then(() => {
+        setTimeout(fetchPosts, 1000);
+    })
   };
 
   return (
