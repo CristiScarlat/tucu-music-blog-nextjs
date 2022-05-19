@@ -1,8 +1,7 @@
 import React from 'react'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import 'photoswipe/dist/photoswipe.css'
-//import 'photoswipe/dist/default-skin/default-skin.css'
-//import './photoGallery.css'
+import { Image } from 'next/image'
 
 const GallerySwipe = ({ imageList }) => {
     const localList = imageList.map(o => (
@@ -11,7 +10,8 @@ const GallerySwipe = ({ imageList }) => {
             thumbnail: o.src,
             width:"1024",
             height:"768",
-            aspectRatio: o.aspectRatio
+            aspectRatio: o.aspectRatio,
+            loaded: false
         }))
     return (
         <div className="gallery-swipe-container">
@@ -19,14 +19,12 @@ const GallerySwipe = ({ imageList }) => {
                 {localList.map((imgObj, index) => <Item
                     key={imgObj.id + "gallery-swipe" + index}
                     original={imgObj.original}
-                    thumbnail={imgObj.thumbnail}
+                    // thumbnail={imgObj.thumbnail}
                     width={imgObj.width}
                     height={(imgObj.width / imgObj.aspectRatio)}
                     style={{ margin: '2rem' }}
                 >
-                    {({ ref, open }) => (
-                        <img ref={ref} onClick={open} src={imgObj.original} />
-                    )}
+                    {({ ref, open }) => <img ref={ref} onClick={open} src={imgObj.original} loading="lazy" onLoad={() => imgObj.loaded = true}/>}
                 </Item>)}
             </Gallery>
         </div >

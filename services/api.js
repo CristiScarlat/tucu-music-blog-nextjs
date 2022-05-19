@@ -1,4 +1,4 @@
-import { storage, ref, listAll, getDownloadURL, db, collection, getDocs } from '../firebase/firebase';
+import { storage, ref, listAll, getDownloadURL, db, collection, getDocs, setDoc, doc, Timestamp } from '../firebase/firebase';
 
 let tracks = [];
 
@@ -33,4 +33,13 @@ export const getPosts = async () => {
         posts.push(doc.data());
     });
     return posts;
+}
+
+export const toFirebaseTimestamp = (date) => {
+    return Timestamp.fromDate(date);
+}
+
+export const setPost = async (post) => {
+    const res = await setDoc(doc(db, "tucu-posts", Date.now().toString()), {...post});
+    console.log(res)
 }

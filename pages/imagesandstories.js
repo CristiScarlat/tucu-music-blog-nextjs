@@ -8,7 +8,7 @@ const ImagesAndStories = () => {
     const [selectedImage, setSelectedImage] = useState();
 
     const images = [
-        {src: "images/poze/1.png", aspectRatio: 1.2},
+        {src: "images/poze-prelucrate/1.png", aspectRatio: 1.2},
         {src: "images/poze/2.png", aspectRatio: 1.2},
         {src: "images/poze/3.png", aspectRatio: 1.2},
         {src: "images/poze/4.png", aspectRatio: 1.2},
