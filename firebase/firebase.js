@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
-import { getFirestore, collection, getDocs, setDoc, doc, Timestamp } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, setDoc, doc, Timestamp, query, orderBy} from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -20,4 +20,6 @@ const storage = getStorage(firebaseApp);
 
 const db = getFirestore(firebaseApp);
 
-export { db, collection, getDocs, setDoc, doc, storage, ref, listAll, getDownloadURL, Timestamp }
+const postsRef = collection(db, "tucu-posts")
+
+export { db, collection, getDocs, setDoc, doc, query, orderBy, postsRef, storage, ref, listAll, getDownloadURL, Timestamp }
