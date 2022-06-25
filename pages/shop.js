@@ -1,29 +1,30 @@
-import { useState, useRef } from "react";
-import { Form, Button } from "react-bootstrap";
-import ReCAPTCHA from "react-google-recaptcha";
-import emailjs from "@emailjs/browser";
+import { useState, useRef } from 'react';
+import { Form, Button, Spinner } from 'react-bootstrap';
+import ReCAPTCHA from 'react-google-recaptcha';
+import emailjs from '@emailjs/browser';
 
 const Shop = () => {
   const [error, setError] = useState({});
+  const [spinner, setSpinner] = useState(false);
 
   const formRef = useRef();
 
   const validateOnSubmit = (formData) => {
     const tempError = { ...error };
-    if (!formData.reCaptcha || formData.reCaptcha === "") {
-      tempError.reCaptcha = "Confirmă ca nu ești robot.";
+    if (!formData.reCaptcha || formData.reCaptcha === '') {
+      tempError.reCaptcha = 'Confirmă ca nu ești robot.';
     }
-    if (!formData.name || formData.name === "") {
-      tempError.name = "Numele complet este obligatoriu.";
+    if (!formData.name || formData.name === '') {
+      tempError.name = 'Numele complet este obligatoriu.';
     }
-    if (!formData.address || formData.address === "") {
-      tempError.address = "Adresa completă este obligatorie.";
+    if (!formData.address || formData.address === '') {
+      tempError.address = 'Adresa completă este obligatorie.';
     }
-    if (!formData.phone || formData.phone === "") {
-      tempError.phone = "Numărul de telefon este obligatoriu.";
+    if (!formData.phone || formData.phone === '') {
+      tempError.phone = 'Numărul de telefon este obligatoriu.';
     }
     setError(tempError);
-    return Object.values(tempError).find(e => e !== null) === undefined
+    return Object.values(tempError).find((e) => e !== null) === undefined;
   };
 
   const handleSubmit = (e) => {
@@ -34,7 +35,8 @@ const Shop = () => {
     const qty = e.target[3].value;
     const reCaptcha = e.target[4].value;
     if (!validateOnSubmit({ name, address, phone, qty, reCaptcha })) return;
-    console.log("send email")
+    console.log('send email');
+    setSpinner(true);
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -45,16 +47,18 @@ const Shop = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setSpinner(false);
         },
         (error) => {
           console.log(error.text);
+          setSpinner(false);
         }
       );
   };
 
   const onCaptchaChange = (token) => {
-    if (token || token !== "") {
-      resetError("reCaptcha");
+    if (token || token !== '') {
+      resetError('reCaptcha');
     }
   };
 
@@ -67,16 +71,21 @@ const Shop = () => {
   };
 
   const backgroundImageStyle = {
-    backgroundImage: "url(images/poze-prelucrate/1.png)",
-    backgroundRepeat: "repeat",
-    backgroundSize: "contain",
-    flex: "auto",
+    backgroundImage: 'url(images/poze-prelucrate/1.png)',
+    backgroundRepeat: 'repeat',
+    backgroundSize: 'contain',
+    flex: 'auto'
   };
 
   return (
     <div className="shop-page-container" style={backgroundImageStyle}>
       <Form onSubmit={handleSubmit} className="shop-form" ref={formRef}>
-        <div>&#9432;<span className="m-2">Aici poți comanda CD-ul Sauvage, plata se va face ramburs.</span></div>
+        <div>
+          &#9432;
+          <span className="m-2">
+            Aici poți comanda CD-ul Sauvage, plata se va face ramburs.
+          </span>
+        </div>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Nume</Form.Label>
           <Form.Control
@@ -84,7 +93,7 @@ const Shop = () => {
             autoFocus
             placeholder="Nume și Prenume"
             name="tucu_shop_name"
-            onChange={() => resetError("name")}
+            onChange={() => resetError('name')}
           />
           <div className="shop-form-error">{error.name}</div>
         </Form.Group>
@@ -95,7 +104,7 @@ const Shop = () => {
             type="text"
             placeholder="Adresa Completa, Oraș, Județ"
             name="tucu_shop_address"
-            onChange={() => resetError("address")}
+            onChange={() => resetError('address')}
           />
           <div className="shop-form-error">{error.address}</div>
         </Form.Group>
@@ -106,7 +115,7 @@ const Shop = () => {
             type="phone"
             placeholder="Telefon"
             name="tucu_shop_phone"
-            onChange={() => resetError("phone")}
+            onChange={() => resetError('phone')}
           />
           <div className="shop-form-error">{error.phone}</div>
         </Form.Group>
@@ -133,7 +142,17 @@ const Shop = () => {
           <Button className="me-3" variant="secondary">
             Renunta
           </Button>
-          <Button type="submit">
+          <Button type="submit" variant="primary">
+            {spinner && (
+              <Spinner
+                as="span"
+                animation="border"
+                size="sm"
+                role="status"
+                aria-hidden="true"
+                className="me-2"
+              />
+            )}
             Trimite Comanda
           </Button>
         </div>
