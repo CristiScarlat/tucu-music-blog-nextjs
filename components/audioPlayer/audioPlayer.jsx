@@ -115,21 +115,21 @@ const AudioPlayer = ({ playlist }) => {
                 <div className="d-flex flex-column mb-1">
                     <div className='player-controls-container d-flex flex-column mb-2'>
                         <div className='player-buttons-container'>
-                            <button onClick={handlePlay} className="player-control-buttons me-2">
+                            <button onClick={handlePlay} className="player-control-buttons me-2" style={{width: 40}}>
                                 <FontAwesomeIcon icon={playStatus ? faPause : faPlay} size='2x' color='#ffffff8c' />
                             </button>
-                            <button onClick={handleStop} className="player-control-buttons me-2">
-                                <FontAwesomeIcon icon={faStop} size='2x' color='#ffffff8c' />
+                            <button onClick={handleStop} className="player-control-buttons me-2" style={{width: 40}}>
+                                <FontAwesomeIcon icon={faStop} size='2x' color='#ffffff8c'/>
                             </button>
-                            <button onClick={handlePrevTrack} className="player-control-buttons me-2" disabled={selectedTrack === 0}>
+                            <button onClick={handlePrevTrack} className="player-control-buttons me-2" style={{width: 40}} disabled={selectedTrack === 0}>
                                 <FontAwesomeIcon icon={faFastBackward} size='2x' color={selectedTrack === 0 ? '#ffffff40' : '#ffffff8c'} />
                             </button>
-                            <button onClick={handleNextTrack} className="player-control-buttons me-2" disabled={selectedTrack === playlist.length - 1}>
+                            <button onClick={handleNextTrack} className="player-control-buttons me-2" style={{width: 40}} disabled={selectedTrack === playlist.length - 1}>
                                 <FontAwesomeIcon icon={faFastForward} size='2x' color={selectedTrack === playlist.length - 1 ? '#ffffff40' : '#ffffff8c'} />
                             </button>
                         </div>
                         <div id="player-volum-container">
-                            <button onClick={handleMute} className="player-control-buttons me-2"><FontAwesomeIcon icon={volumeMuteStatus ? faVolumeMute : faVolumeUp} size='2x' color='#ffffff8c' /></button>
+                            <button onClick={handleMute} className="player-control-buttons me-2"><FontAwesomeIcon icon={volumeMuteStatus ? faVolumeMute : faVolumeUp} size='2x' color='#ffffff8c' style={{width: 40}}/></button>
                             <input type="range" className='w-100' min="0" max="1" onChange={handleSetVolume} step="0.1" disabled={volumeMuteStatus} />
                         </div>
                     </div>
