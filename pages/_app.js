@@ -7,7 +7,8 @@ import '../styles/lyrics.css';
 import '../styles/artists.css';
 // import 'photoswipe/dist/photoswipe.css'
 // import 'photoswipe/dist/default-skin/default-skin.css'
-import '../styles/imagesAndStories.css'
+import '../styles/imagesAndStories.css';
+import '../styles/shop.css';
 
 
 function MyApp({ Component, pageProps }) {

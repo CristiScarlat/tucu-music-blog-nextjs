@@ -1,7 +1,145 @@
-
+import { useState, useRef } from "react";
+import { Form, Button } from "react-bootstrap";
+import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from "@emailjs/browser";
 
 const Shop = () => {
-    return <div>shop</div>
-}
+  const [error, setError] = useState({});
+
+  const formRef = useRef();
+
+  const validateOnSubmit = (formData) => {
+    const tempError = { ...error };
+    if (!formData.reCaptcha || formData.reCaptcha === "") {
+      tempError.reCaptcha = "Confirmă ca nu ești robot.";
+    }
+    if (!formData.name || formData.name === "") {
+      tempError.name = "Numele complet este obligatoriu.";
+    }
+    if (!formData.address || formData.address === "") {
+      tempError.address = "Adresa completă este obligatorie.";
+    }
+    if (!formData.phone || formData.phone === "") {
+      tempError.phone = "Numărul de telefon este obligatoriu.";
+    }
+    setError(tempError);
+    return Object.values(tempError).find(e => e !== null) === undefined
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target[0].value;
+    const address = e.target[1].value;
+    const phone = e.target[2].value;
+    const qty = e.target[3].value;
+    const reCaptcha = e.target[4].value;
+    if (!validateOnSubmit({ name, address, phone, qty, reCaptcha })) return;
+    console.log("send email")
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const onCaptchaChange = (token) => {
+    if (token || token !== "") {
+      resetError("reCaptcha");
+    }
+  };
+
+  const resetError = (whichError) => {
+    if (error[whichError]) {
+      const tempError = { ...error };
+      tempError[whichError] = null;
+      setError(tempError);
+    }
+  };
+
+  const backgroundImageStyle = {
+    backgroundImage: "url(images/poze-prelucrate/1.png)",
+    backgroundRepeat: "repeat",
+    backgroundSize: "contain",
+    flex: "auto",
+  };
+
+  return (
+    <div className="shop-page-container" style={backgroundImageStyle}>
+      <Form onSubmit={handleSubmit} className="shop-form" ref={formRef}>
+        <div>&#9432;<span className="m-2">Aici poți comanda CD-ul Sauvage, plata se va face ramburs.</span></div>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Nume</Form.Label>
+          <Form.Control
+            type="text"
+            autoFocus
+            placeholder="Nume și Prenume"
+            name="tucu_shop_name"
+            onChange={() => resetError("name")}
+          />
+          <div className="shop-form-error">{error.name}</div>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Adresa de livrare</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Adresa Completa, Oraș, Județ"
+            name="tucu_shop_address"
+            onChange={() => resetError("address")}
+          />
+          <div className="shop-form-error">{error.address}</div>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Telefon</Form.Label>
+          <Form.Control
+            type="phone"
+            placeholder="Telefon"
+            name="tucu_shop_phone"
+            onChange={() => resetError("phone")}
+          />
+          <div className="shop-form-error">{error.phone}</div>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Cantitate</Form.Label>
+          <Form.Control
+            type="number"
+            min={1}
+            placeholder="Numar de cd-uri."
+            name="tucu_shop_qty"
+            defaultValue={1}
+          />
+        </Form.Group>
+
+        <div className="mt-2 mb-2">
+          <ReCAPTCHA
+            sitekey={process.env.NEXT_PUBLIC_CAPTCHA_KEY}
+            onChange={onCaptchaChange}
+          />
+          <div className="shop-form-error">{error.reCaptcha}</div>
+        </div>
+        <div className="d-flex justify-content-end mt-2">
+          <Button className="me-3" variant="secondary">
+            Renunta
+          </Button>
+          <Button type="submit">
+            Trimite Comanda
+          </Button>
+        </div>
+      </Form>
+    </div>
+  );
+};
 
 export default Shop;

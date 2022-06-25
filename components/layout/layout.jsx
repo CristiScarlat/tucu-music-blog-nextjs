@@ -16,6 +16,7 @@ export default function Layout({ children }) {
             <Head>
                 <title>DermatIQ</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <link rel="icon" href="favicon_io/favicon.ico" />
             </Head>
             <AppHeader brandName="Tucu Bleich" expand="lg"/>
             <div style={backgroundImageStyle}>{children}</div>

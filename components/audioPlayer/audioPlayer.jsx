@@ -44,7 +44,10 @@ const AudioPlayer = ({ playlist }) => {
         if (selectedTrack < playlist.length - 1) {
             setSelectedTrack(prev => prev + 1)
         }
-    }, [])
+        else {
+            handleStop();
+        }
+    }, [selectedTrack])
 
     const handleOnTimeUpdate = useCallback(() => {
         setPlayProgress(playerRef.current.currentTime)
