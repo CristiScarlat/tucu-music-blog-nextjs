@@ -22,3 +22,9 @@
     font-style: oblique;
     font-size: 18px;
 }
+
+.shop-toast{
+    position: fixed;
+    top: 0;
+    right: 10px;
+}

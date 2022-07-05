@@ -1,13 +1,26 @@
-import { useState, useRef } from 'react';
-import { Form, Button, Spinner } from 'react-bootstrap';
+import { useState, useRef, useEffect } from 'react';
+import { Form, Button, Spinner, Toast } from 'react-bootstrap';
 import ReCAPTCHA from 'react-google-recaptcha';
 import emailjs from '@emailjs/browser';
 
 const Shop = () => {
   const [error, setError] = useState({});
   const [spinner, setSpinner] = useState(false);
+  const [toast, setToast] = useState({
+    show: false
+  });
 
   const formRef = useRef();
+
+  useEffect(() => {
+    const delayId = null;
+    if (toast.show) {
+      delayId = setTimeout(() => {
+        setToast({ show: false });
+      }, 5000);
+    }
+    return () => clearTimeout(delayId);
+  }, [toast.show]);
 
   const validateOnSubmit = (formData) => {
     const tempError = { ...error };
@@ -35,7 +48,6 @@ const Shop = () => {
     const qty = e.target[3].value;
     const reCaptcha = e.target[4].value;
     if (!validateOnSubmit({ name, address, phone, qty, reCaptcha })) return;
-    console.log('send email');
     setSpinner(true);
     emailjs
       .sendForm(
@@ -46,11 +58,21 @@ const Shop = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setToast({
+            show: true,
+            header: 'OK',
+            body: 'Comanda dvs. a fost trimisa cu succes, multumim.',
+            backgroundColor: 'green'
+          });
           setSpinner(false);
         },
         (error) => {
-          console.log(error.text);
+          setToast({
+            show: true,
+            header: 'Error',
+            body: 'Comanda nu s-a facut cu success, va rugam contactati-ne telefonic.',
+            backgroundColor: 'red'
+          });
           setSpinner(false);
         }
       );
@@ -157,6 +179,19 @@ const Shop = () => {
           </Button>
         </div>
       </Form>
+
+      <Toast
+        show={toast.show}
+        onClose={() => {}}
+        className="shop-toast"
+        style={{ backgroundColor: toast.backgroundColor }}
+      >
+        <Toast.Header>
+          <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+          <strong className="me-auto"></strong>
+        </Toast.Header>
+        <Toast.Body>{toast.body}</Toast.Body>
+      </Toast>
     </div>
   );
 };
