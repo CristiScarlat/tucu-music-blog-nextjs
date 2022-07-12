@@ -50,7 +50,7 @@ const Posts = () => {
               title={p.title}
               name={p.fullName}
               content={p.details}
-              postDate={p.postDate.toString()}
+              postDate={`${p.postDate.getDay()+1}/${p.postDate.getMonth()+1}/${p.postDate.getFullYear()}`}
             />
             <div className="mt-3" />
           </div>

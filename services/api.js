@@ -42,7 +42,7 @@ export const getTracks = async () => {
 
 export const getPosts = async () => {
   // const querySnapshot = await getDocs(collection(db, "tucu-posts"))
-  const q = query(postsRef, orderBy("timestamp", "desc"));
+  const q = query(postsRef, orderBy("timestamp", "asc"));
   const querySnapshot = await getDocs(q);
   const posts = [];
   querySnapshot.forEach((doc) => {

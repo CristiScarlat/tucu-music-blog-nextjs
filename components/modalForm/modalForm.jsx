@@ -79,7 +79,6 @@ const ModalForm = ({ showModal, handleCloseModal, handleSaveButton }) => {
             <Form.Control
               as="textarea"
               rows={5}
-              maxLength={500}
               name="details"
             />
           </Form.Group>
