@@ -102,12 +102,30 @@ const Shop = () => {
   return (
     <div className="shop-page-container" style={backgroundImageStyle}>
       <Form onSubmit={handleSubmit} className="shop-form" ref={formRef}>
-        <div>
+        <div className="shop-page-info">
           &#9432;
           <span className="m-2">
-            Aici poți comanda CD-ul Sauvage, plata se va face ramburs.
+            CD ul se poate cumpara de la:
           </span>
         </div>
+        <ul>
+          <li>
+            <a href="https://carturesti.ro/muzica/sauvage-1738493553?p=1&t=c_quick-search&s=tucu+bleich" target="__blank" className="shop-page-link">Cărturești</a>
+          </li>
+          <li>
+            <a href="https://www.humanitas.ro" target="__blank" className="shop-page-link">Humanitas</a>
+          </li>
+          <li>
+            <a href="https://ladouabufnite.ro/" target="__blank" className="shop-page-link">La doua bufnițe<span className="shop-page-link-span">{'( '}în magazin{' )'}</span></a>
+          </li>
+          <li>
+            <a href="https://viniloteca.shop/" target="__blank" className="shop-page-link">Viniloteca<span className="shop-page-link-span">{'( '}în magazin{' )'}</span></a>
+          </li>
+          <li className="mt-3">
+            Sau poți comanda CD-ul Sauvage online.<br/><span className="shop-page-pret me-1">53ron</span>{'( '}inclusiv ramburs{' )'}
+          </li>
+        </ul>
+
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Nume</Form.Label>
           <Form.Control
@@ -182,7 +200,7 @@ const Shop = () => {
 
       <Toast
         show={toast.show}
-        onClose={() => {}}
+        onClose={() => { }}
         className="shop-toast"
         style={{ backgroundColor: toast.backgroundColor }}
       >
