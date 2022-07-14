@@ -27,12 +27,10 @@ const Player = () => {
     }, [])
 
     const handleOnPlay = () => {
-        console.log('playing')
         setShowPlaylist(true)
     }
 
     const handleOnStop = () => {
-        console.log('stoped')
         setShowPlaylist(false)
     }
 

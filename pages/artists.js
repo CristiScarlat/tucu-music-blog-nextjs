@@ -24,6 +24,7 @@ const ArtistsPage = () => {
                     <div className='mt-2'><span style={{ color: 'rgb(250, 183, 28)' }}>*</span>Radu Cristian Constantin - <span>&quot;Derulare&quot;, textul piesei Sauvage (13)</span></div>
                     <div>Sebastian Ciocan  (Show Factory) - <span>sunet</span></div>
                     <div>Mircea Bunea - <span>grafică copertă</span></div>
+                    <div>Cristi Scarlat - <span>website</span></div>
                 </div>
                 <div className='multumiri-container'>
                     <span>Mulțumiri: </span>

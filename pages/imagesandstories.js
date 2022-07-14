@@ -21,7 +21,7 @@ const ImagesAndStories = () => {
     ]
 
     return (
-        <main style={{background: 'black'}}>
+        <main style={{background: 'black', marginBottom: '2rem'}}>
             {/* <div className='d-flex flex-wrap p-3 m-3 justify-content-center'>
                 {images.map((image, index) => <div key={image + index} className="w-20 m-3" onClick={() => handleZoomImg(index)}><img src={image} width={500} height={'auto'}/></div>)}
             </div>

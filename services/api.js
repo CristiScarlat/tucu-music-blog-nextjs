@@ -59,5 +59,4 @@ export const setPost = async (post) => {
   const res = await setDoc(doc(db, "tucu-posts", Date.now().toString()), {
     ...post,
   });
-  console.log(res);
 };
