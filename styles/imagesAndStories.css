@@ -1,0 +1,50 @@
+.images-main {
+    position: relative;
+    overflow-y: auto;
+}
+
+.image-zoom-container {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000e6;
+}
+
+
+
+.image-zoom-container > button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 5rem 5rem 0 0;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.gallery-swipe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gallery-swipe-container img{
+    object-fit: cover;
+    height: 460px;
+    width: 460px;
+    margin: 0.5rem;
+}
+
+@media only screen and (max-width: 600px){
+    .gallery-swipe-container img{
+        object-fit: cover;
+        height: auto;
+        width: 365px;
+        margin: 0.5rem;
+    }
+}

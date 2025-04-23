@@ -1,0 +1,64 @@
+.main-artists-page {
+    background: #000000d1;
+
+}
+
+.artists-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    right: 10%;
+    background: transparent;
+    /* color: whitesmoke; */
+    color: rgb(250, 183, 28);
+    padding: 1rem;
+    line-height: 2rem;
+    overflow: auto;
+    height: 80vh;
+    font-weight: 800;
+    margin-top: 3rem;
+}
+
+.artists-container span {
+    font-weight: 400;
+    color: #f8f9faad;
+}
+
+.multumiri-container {
+    display: flex;
+    /* flex-direction: column; */
+    /* grid-gap: 0.5rem; */
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.multumiri-container > div {
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 600px){
+    .multumiri-container {
+        display: flex;
+        flex-direction: column;
+        /* grid-gap: 0.5rem; */
+        /* gap: 0.5rem; */
+        flex-wrap: wrap;
+    }
+    .artists-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        right: 0;
+        background: transparent;
+        /* color: whitesmoke; */
+        color: rgb(250, 183, 28);
+        padding: 1rem;
+        line-height: 2rem;
+        overflow: auto;
+        height: 80vh;
+        font-weight: 800;
+        margin-top: 3rem;
+    }
+}

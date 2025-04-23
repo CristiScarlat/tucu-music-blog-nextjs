@@ -1,0 +1,56 @@
+.shop-page-container {
+    color: white;
+    background-color: #0000009c;
+    height: 100%;
+    padding: 3rem 0.5rem;
+}
+
+.shop-form {
+    max-width: 30rem;
+    margin: auto;
+    padding: 1rem;
+    background: #000000de;
+    border-radius: 5px;
+}
+
+.shop-form label {
+    font-weight: bold;
+}
+
+.shop-form-error {
+    color: red;
+    font-style: oblique;
+    font-size: 18px;
+}
+
+.shop-toast{
+    position: fixed;
+    top: 0;
+    right: 10px;
+}
+
+.shop-page-info {
+    font-size: 18px;
+}
+
+.shop-page-link {
+    color: rgb(250, 183, 28);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.shop-page-link:hover{
+    color: #90b9f7;
+}
+
+.shop-page-pret {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.shop-page-link-span {
+    margin-left: 0.5rem;
+    font-size: 16px;
+    font-weight: 400;
+    color: whitesmoke;
+}

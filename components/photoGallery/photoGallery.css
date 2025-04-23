@@ -1,0 +1,14 @@
+.gallery-swipe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.gallery-swipe-container img{
+    object-fit: cover;
+    height: 460px;
+    width: 460px;
+    margin: 0.5rem;
+}
